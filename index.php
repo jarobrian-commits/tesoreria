@@ -2,7 +2,7 @@
 session_start();
 
 if (!empty($_SESSION['logueado']) && !empty($_SESSION['usuario']) && !empty($_SESSION['cliente'])) {
-    header('Location: /tesoreria/menu.php');
+    header('Location: /menu.php');
     exit;
 }
 
@@ -13,5 +13,5 @@ if ($cliente === '' || !preg_match('/^[a-z0-9_-]+$/', $cliente)) {
     $cliente = 'demo';
 }
 
-header('Location: /tesoreria/login.php?cliente=' . urlencode($cliente));
+header('Location: /login.php?cliente=' . urlencode($cliente));
 exit;
