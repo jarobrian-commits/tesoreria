@@ -14,8 +14,8 @@ if (!isset($_SESSION["usuario"])) {
 
 header('Content-Type: application/json; charset=utf-8');
 
-require_once __DIR__ . '/../api/log.php';
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/api/log.php';
+require_once __DIR__ . '/api/db.php';
 
 $pdo = db();
 

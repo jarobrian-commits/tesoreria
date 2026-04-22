@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/api/auth.php';
-require_once __DIR__ . '/../api/permisos.php';
-require_once __DIR__ . '/../api/db.php';
+require_once __DIR__ . '/api/permisos.php';
+require_once __DIR__ . '/api/db.php';
 
 $cliente = $_SESSION['cliente'];
 $usuario = $_SESSION['usuario'];
