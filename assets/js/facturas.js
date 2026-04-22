@@ -323,7 +323,7 @@ $(document).ready(function () {
   const hasta_emision = ($("#fac-ha").val() || "").trim();
 
   const url =
-    `${API}?action=facturas_export`
+    `${api}?action=facturas_export`
     + `&q=${encodeURIComponent(q)}`
     + `&estado=${encodeURIComponent(estado)}`
     + `&desde_emision=${encodeURIComponent(desde_emision)}`

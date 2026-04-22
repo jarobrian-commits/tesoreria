@@ -1,8 +1,8 @@
 // assets/js/core.js
-// Núcleo: utilidades + API + helpers comunes
+// Núcleo: utilidades + api+ helpers comunes
 
 const CLIENTE = new URLSearchParams(window.location.search).get("cliente") || "demo";
-window.API = "/api/ajax.php";
+window.api= "/api/ajax.php";
 
 /* =========================
    UTILIDADES
@@ -61,7 +61,7 @@ function alertErr(e) {
 }
 
 /* =========================
-   API (AJAX)
+   api(AJAX)
 ========================= */
 
 async function apiGet(action, params = {}) {
@@ -71,7 +71,7 @@ async function apiGet(action, params = {}) {
     ...params
   }).toString();
 
-  const r = await fetch(`${API}?${qs}`, {
+  const r = await fetch(`${api}?${qs}`, {
     headers: { "Accept": "application/json" }
   });
 
@@ -82,7 +82,7 @@ async function apiGet(action, params = {}) {
 
 async function apiPost(action, body = {}) {
   const r = await fetch(
-    `${API}?cliente=${encodeURIComponent(CLIENTE)}&action=${encodeURIComponent(action)}`,
+    `${api}?cliente=${encodeURIComponent(CLIENTE)}&action=${encodeURIComponent(action)}`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -97,7 +97,7 @@ async function apiPost(action, body = {}) {
 
 async function apiPostForm(action, formData) {
   const r = await fetch(
-    `${API}?cliente=${encodeURIComponent(CLIENTE)}&action=${encodeURIComponent(action)}`,
+    `${api}?cliente=${encodeURIComponent(CLIENTE)}&action=${encodeURIComponent(action)}`,
     {
       method: "POST",
       body: formData

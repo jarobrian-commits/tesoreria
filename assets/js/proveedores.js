@@ -283,7 +283,7 @@ function renderProveedores(rows) {
 $("#prov-export").on("click", function () {
   const q = ($("#prov-q").val() || "").trim();
   const estado = $("#prov-estado").length ? $("#prov-estado").val() : "activos";
-  const url = `${API}?action=proveedores_export&q=${encodeURIComponent(q)}&estado=${encodeURIComponent(estado)}`;
+  const url = `${api}?action=proveedores_export&q=${encodeURIComponent(q)}&estado=${encodeURIComponent(estado)}`;
   window.open(url, "_blank");
 });
 
